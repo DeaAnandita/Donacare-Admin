@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginActivity"
+    android:background="#FCFCFC">
+
+    <ScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/bg_profile"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@drawable/profile_bg"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/profile"
+                android:background="@drawable/bottom_background"
+                />
+
+            <ImageView
+                android:id="@+id/imgProfpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/profpic"
+                android:layout_below="@id/img1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/imgEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/email"
+                android:layout_below="@id/imgProfpic"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"/>
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/location"
+                android:layout_below="@id/imgEmail"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/img1"
+                android:layout_toRightOf="@+id/imgProfpic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example@gmail.com"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/imgProfpic"
+                android:layout_toRightOf="@+id/imgEmail"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jl. Example no.09, Example, Rt/Rw : 02/02"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/imgEmail"
+                android:layout_toRightOf="@+id/imgEmail"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListHome"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:background="@color/white"
+                android:layout_below="@+id/bg_profile"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                tools:listitem="@layout/list_item"
+                android:layout_marginHorizontal="20dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            >-->
+
+
+<!--        </RelativeLayout>-->
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+
+</RelativeLayout>
